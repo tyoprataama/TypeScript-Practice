@@ -1,4 +1,5 @@
-const persons: {
+//  Object types and Array types
+const person: {
     name: string,
     age: number
     others: {
@@ -17,5 +18,11 @@ const persons: {
     },
     sosmed: ["instagram", "twitter", "github"]
 }
+console.log(person.others.hobbies);
 
-console.log(persons.others.hobbies);
+//  Looping example
+for (const social of person.sosmed) {
+    console.log(social.toUpperCase());
+    
+}
+
