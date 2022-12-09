@@ -1,3 +1,5 @@
+//  Enum
+enum Role {ADMIN = 'ADMIN', DEV = 'REACT'}
 //  Object types and Array types
 const persons: {
     name: string,
@@ -5,10 +7,11 @@ const persons: {
     others: {
         hobbies: string,
         favourite: number,
-        single: boolean
+        single: boolean,
     }
     sosmed: string[],
     pet: [number, string],
+    role: string,
 } = {
     name: 'Tyo',
     age: 21,
@@ -18,13 +21,16 @@ const persons: {
         single: true
     },
     sosmed: ['instagram', 'twitter', 'github'],
-    pet: [4, 'bird']
+    pet: [4, 'bird'],
+    role: Role.DEV
 }
 
 console.log(persons.others.hobbies);
 
 persons.pet.push('fish');
 console.log(persons.pet);
+console.log(persons.role);
+
 
 
 //  Looping example
