@@ -1,16 +1,20 @@
 //  Object types and Array types
-var person = {
+var persons = {
     name: 'Tyo',
     age: 21,
     others: {
         hobbies: 'Watching Film',
         favourite: 2,
-        pet: true
+        single: true
     },
-    sosmed: ["instagram", "twitter", "github"]
+    sosmed: ['instagram', 'twitter', 'github'],
+    pet: [4, 'bird']
 };
-for (var _i = 0, _a = person.sosmed; _i < _a.length; _i++) {
+console.log(persons.others.hobbies);
+persons.pet.push('fish');
+console.log(persons.pet);
+//  Looping example
+for (var _i = 0, _a = persons.sosmed; _i < _a.length; _i++) {
     var social = _a[_i];
     console.log(social.toUpperCase());
 }
-console.log(person.others.hobbies);
