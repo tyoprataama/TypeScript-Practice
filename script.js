@@ -1,28 +1,12 @@
-//  Enum
-var Role;
-(function (Role) {
-    Role["ADMIN"] = "ADMIN";
-    Role["DEV"] = "REACT";
-})(Role || (Role = {}));
-//  Object types and Array types
-var persons = {
-    name: 'Tyo',
-    age: 21,
-    others: {
-        hobbies: 'Watching Film',
-        favourite: 2,
-        single: true
-    },
-    sosmed: ['instagram', 'twitter', 'github'],
-    pet: [4, 'bird'],
-    role: Role.DEV
+var combine = function (input1, input2) {
+    var result;
+    if (typeof input1 === 'number' && typeof input2 === 'number') {
+        result = input1 + input2;
+    }
+    else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
 };
-console.log(persons.others.hobbies);
-persons.pet.push('fish');
-console.log(persons.pet);
-console.log(persons.role);
-//  Looping example
-for (var _i = 0, _a = persons.sosmed; _i < _a.length; _i++) {
-    var social = _a[_i];
-    console.log(social.toUpperCase());
-}
+var combineAges = combine('Max', 45);
+console.log(combineAges);
