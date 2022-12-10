@@ -12,6 +12,7 @@ const persons: {
     sosmed: string[],
     pet: [number, string],
     role: string,
+    major: any[],
 } = {
     name: 'Tyo',
     age: 21,
@@ -22,7 +23,8 @@ const persons: {
     },
     sosmed: ['instagram', 'twitter', 'github'],
     pet: [4, 'bird'],
-    role: Role.DEV
+    role: Role.DEV,
+    major: ['Economy']
 }
 
 console.log(persons.others.hobbies);
