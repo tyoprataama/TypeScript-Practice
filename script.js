@@ -1,16 +1,8 @@
-function add(n1, n2) {
-    return n1 + n2;
+var userInput; // the difference between any and unknown is we can put anything in unknown
+var userName;
+userInput = 5;
+userInput = 'Max';
+// userName = userInput (it will show error bcs unknown don't know what exactly userInput is)
+if (typeof userInput === 'string') {
+    userName = userInput; // we can figure it out through if statement
 }
-function printRes(num) {
-    console.log('Result:' + num);
-}
-printRes(add(3, 5));
-var combinesVal;
-combinesVal = add;
-function cbFunc(n1, n2, cb) {
-    var res = n1 + n2;
-    cb(res);
-}
-cbFunc(23, 22, function (result) {
-    console.log(result);
-});

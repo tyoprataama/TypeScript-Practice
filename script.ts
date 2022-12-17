@@ -1,19 +1,9 @@
-function add(n1: number, n2: number) {
-    return n1 + n2;
-}
-function printRes(num: number):void {
-    console.log('Result:' + num);
-}
-printRes(add(3,5));
+let userInput: unknown; // the difference between any and unknown is we can put anything in unknown
+let userName: string;
 
-let combinesVal: (a: number, b: number) => number;
-combinesVal = add;
-
-function cbFunc(n1: number, n2: number, cb:(num:number) => void) {
-    const res = n1 + n2;
-    cb(res);
+userInput = 5;
+userInput = 'Max';
+// userName = userInput (it will show error bcs unknown don't know what exactly userInput is)
+if(typeof userInput === 'string') {
+    userName = userInput; // we can figure it out through if statement
 }
-
-cbFunc(23, 22, (result) => {
-    console.log(result);
-})
