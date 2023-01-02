@@ -26,3 +26,14 @@ const Adding = (...numbers) => {
 };
 const unrestParam = Adding(2, 65, 21);
 console.log(unrestParam);
+//  Array destructuring
+const [hobby1, hobby2, ...remainHobbies] = hobbies;
+console.log(hobby1, hobby2);
+//  Object destructuring
+const person = {
+    firstName: 'Max',
+    gender: 'Male',
+    nationality: 'Canada'
+};
+const { firstName: realName, gender: sex } = person;
+console.log(realName, sex);
