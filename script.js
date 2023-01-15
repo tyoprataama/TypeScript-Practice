@@ -4,6 +4,9 @@ class Department {
     constructor(n) {
         this.name = n;
     }
+    describe() {
+        console.log('Department: ' + this.name);
+    }
 }
 const newDept = new Department('Accounting');
-console.log(newDept);
+console.log(newDept.describe());
