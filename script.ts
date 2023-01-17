@@ -4,7 +4,7 @@ class Department {
     constructor(n: string) {
         this.name = n;
     }
-    describe() {
+    describe(this: Department) { // Adding this parameters to avoid undefined
         console.log('Department: ' + this.name);
         
     }
@@ -12,4 +12,7 @@ class Department {
 
 const newDept = new Department('Accounting');
 console.log(newDept.describe());
+
+const newDeptCopy = { name: 'Economy', describe: newDept.describe } //  Must have name property bcs it refers to Department class
+newDeptCopy.describe();
 
