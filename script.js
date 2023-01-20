@@ -20,11 +20,39 @@ class Department {
         console.log(this.student);
     }
 }
-const newDept = new Department('Accounting', 'S1');
-console.log(newDept.describe());
-newDept.addStudent('');
-newDept.addStudent('');
-// newDept.student[2] = '';    this not allowed when private method comes out
-newDept.describeStudent();
+class CSDepartment extends Department {
+    constructor(id, admin) {
+        super(id, 'Max');
+        this.admin = admin;
+    }
+}
+class AccDepartment extends Department {
+    constructor(id, report) {
+        super(id, 'Accounting');
+        this.report = report;
+    }
+    addReport(text) {
+        this.report.push(text);
+    }
+    printReport() {
+        console.log(this.report);
+    }
+}
+// const newDept = new Department('Accounting', 'S1');
+// console.log(newDept.describe());
+// newDept.addStudent('Max')
+// newDept.addStudent('Chloe')
+// // newDept.student[2] = '';    this not allowed when private method comes out
+// newDept.describeStudent();
 // const newDeptCopy = { name: 'Economy', describe: newDept.describe } //  Must have name property bcs it refers to Department class
 // newDeptCopy.describe();
+const it = new CSDepartment('CS', ['Max']);
+console.log(it.describe());
+it.addStudent('Max');
+it.addStudent('Chloe');
+// newDept.student[2] = '';    this not allowed when private method comes out
+it.describeStudent();
+console.log(it);
+const accounting = new AccDepartment('Accounting', []);
+accounting.addReport('This is accounting report');
+accounting.printReport();
