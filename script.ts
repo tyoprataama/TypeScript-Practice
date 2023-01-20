@@ -2,7 +2,7 @@
 class Department {
     // public name: string;
     private student: string[] = []; //  Prevent edit or push outside classes
-    constructor(private n: string, private id: string) {    //  Simplified the code
+    constructor(private n: string, private readonly id: string) {    //  Simplified the code
         // this.name = n;
     }
     describe(this: Department) { // Adding this parameters to avoid undefined
@@ -10,6 +10,7 @@ class Department {
     }
     addStudent(students: string) {
         this.student.push(students);
+        // this.id = S2;    Can't change id bcs readonly method
     }
     describeStudent() {
         console.log(this.student.length);
@@ -18,6 +19,7 @@ class Department {
 }
 
 const newDept = new Department('Accounting', 'S1');
+
 console.log(newDept.describe());
 newDept.addStudent('')
 newDept.addStudent('')

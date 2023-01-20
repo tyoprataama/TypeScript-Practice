@@ -13,6 +13,7 @@ class Department {
     }
     addStudent(students) {
         this.student.push(students);
+        // this.id = S2;    Can't change id bcs readonly method
     }
     describeStudent() {
         console.log(this.student.length);
